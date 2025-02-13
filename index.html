@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng Valentine Em Nở Nha❤️</title>
+    <style>
+        body {
+            background-color: pink;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            transition: background-image 1s ease-in-out;
+        }
+        h1 {
+            color: white;
+            font-size: 3em;
+            margin-top: 50px;
+        }
+        .heart, .createBird, .butterfly, .createBaby {
+            color: red;
+            font-size: 2em;
+            position: absolute;
+            animation: float 4s infinite ease-in-out;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); opacity: 1; }
+            50% { transform: translateY(-100px); opacity: 0.6; }
+            100% { transform: translateY(-200px); opacity: 0; }
+        }
+        .message {
+            color: white;
+            font-size: 1.5em;
+            margin-top: 30px;
+        }
+
+        .video-container {
+            margin-top: 0px;
+        }
+        video {
+            width: 20%;
+            left: 10px;
+            position: absolute;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <h1>Chúc Mừng Valentine 🐦 🦋 👶 ❤️❤️❤️❤️❤️</h1>
+    <p class="message">Gửi đến người anh yêu thương nhất, chúc em có một ngày Valentine tràn ngập niềm vui và hạnh phúc!</p>
+    <div class="video-container">
+        <video controls autoplay loop>
+            <source src="video.mp4" type="video/mp4"></source>
+            Trình duyệt của bạn không hỗ trợ video.
+        </video>
+    </div>
+    <script>
+       
+
+const images = ["1.jpg", "2.jpg", "3.jpg", "4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg"];
+        let currentImageIndex = 0;
+
+        function changeBackground() {
+            document.body.style.backgroundImage = `url(${images[currentImageIndex]})`;
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+        }
+        setInterval(changeBackground, 1000);
+        changeBackground();
+
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "❤️";
+            heart.innerHTML = "Anh Yêu Em Nở Rấc Nhiều Ạ ❤️";
+            document.body.appendChild(heart);
+            
+            heart.style.left = Math.random() * window.innerWidth + "px";
+            heart.style.top = window.innerHeight + "px";
+            heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 4000);
+        }
+
+        function createBird() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "🐦";
+            document.body.appendChild(heart);
+            
+            heart.style.left = Math.random() * window.innerWidth + "px";
+            heart.style.top = window.innerHeight + "px";
+            heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 4000);
+        }
+        
+        function createButterfly() {
+            const butterfly = document.createElement("div");
+            butterfly.classList.add("butterfly");
+            butterfly.innerHTML = "🦋";
+            document.body.appendChild(butterfly);
+            
+            butterfly.style.left = Math.random() * window.innerWidth + "px";
+            butterfly.style.top = window.innerHeight + "px";
+            butterfly.style.animationDuration = Math.random() * 3 + 2 + "s";
+            
+            setTimeout(() => {
+                butterfly.remove();
+            }, 4000);
+        }
+
+        function createBaby() {
+            const butterfly = document.createElement("div");
+            butterfly.classList.add("butterfly");
+            butterfly.innerHTML = "👶";
+            document.body.appendChild(butterfly);
+            
+            butterfly.style.left = Math.random() * window.innerWidth + "px";
+            butterfly.style.top = window.innerHeight + "px";
+            butterfly.style.animationDuration = Math.random() * 3 + 2 + "s";
+            
+            setTimeout(() => {
+                butterfly.remove();
+            }, 4000);
+        }
+        
+        function createElements() {
+            createHeart();
+            createBird();
+            createButterfly();
+            createBaby();
+        }
+        
+        setInterval(createElements, 500);
+    </script>
+</body>
+</html>
